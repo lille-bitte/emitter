@@ -1,3 +1,5 @@
+tools/
 vendor/
 foo/
 composer.lock
+phive.xml
