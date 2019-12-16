@@ -11,17 +11,17 @@ use Psr\Http\Message\ResponseInterface;
  */
 class Emitter implements EmitterInterface
 {
-	use EmitterTrait;
+    use EmitterTrait;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function emit(ResponseInterface $response): bool
-	{
-		$this->emitStatusLine($response);
-		$this->emitHeaders($response);
-		$this->emitContents($response);
+    /**
+     * {@inheritdoc}
+     */
+    public function emit(ResponseInterface $response): bool
+    {
+        $this->emitStatusLine($response);
+        $this->emitHeaders($response);
+        $this->emitContents($response);
 
-		return true;
-	}
+        return true;
+    }
 }

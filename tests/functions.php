@@ -14,15 +14,15 @@ namespace LilleBitte\Emitter\Tests;
  * @param integer $http_response_code HTTP response code.
  * @return void
  */
-function header(string $header, bool $replace = true, int $http_response_code)
+function header(string $header, bool $replace = true, int $http_response_code = 200)
 {
-	HeaderStack::push(
-		[
-			'header' => $header,
-			'replace' => $replace,
-			'response_code' => $http_response_code
-		]
-	);
+    HeaderStack::push(
+        [
+            'header' => $header,
+            'replace' => $replace,
+            'response_code' => $http_response_code
+        ]
+    );
 }
 
 /**
@@ -36,5 +36,5 @@ function header(string $header, bool $replace = true, int $http_response_code)
  */
 function headers_sent(&$file = null, &$line = null)
 {
-	return false;
+    return false;
 }

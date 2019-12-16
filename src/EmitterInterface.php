@@ -11,11 +11,11 @@ use Psr\Http\Message\ResponseInterface;
  */
 interface EmitterInterface
 {
-	/**
-	 * Send HTTP response to client.
-	 *
-	 * @param ResponseInterface $response
-	 * @return bool
-	 */
-	public function emit(ResponseInterface $response): bool;
+    /**
+     * Send HTTP response to client.
+     *
+     * @param ResponseInterface $response
+     * @return bool
+     */
+    public function emit(ResponseInterface $response): bool;
 }
